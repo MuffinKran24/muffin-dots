@@ -82,7 +82,7 @@ Scope {
                 property var ws: Hyprland.workspaces.values.find(w => w.id === modelData)
 
                 text: modelData
-                color: isActive ? root.colCyan : (ws ? root.colFg : root.colMuted)
+                color: isActive ? root.colBlue : (ws ? root.colFg : root.colMuted)
                 font { family: root.fontFamily; pixelSize: root.fontSize; bold: isActive }
 
                 MouseArea {

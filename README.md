@@ -11,7 +11,7 @@ pacman -S stow
 
 ### Hyprland
 ```bash
-pacman -S hyprland hyprlock awww kitty hyprpm wofi qt5ct gtk3 gtk4
+pacman -S hyprland hyprlock awww kitty hyprpm wofi qt5ct gtk3 gtk4 fontconfig swaync
 ```
 
 #### Hyprland plugins
@@ -20,6 +20,16 @@ hyprpm update
 hyprpm add https://github.com/gfhdhytghd/hymission
 hyprpm enable hymission
 hyprpm reload
+```
+
+### Zsh
+```bash
+pacman -S zsh
+```
+after installing zsh set it as your login shell
+
+```bash
+chsh $USER
 ```
 
 ### Quickshell

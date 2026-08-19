@@ -7,7 +7,7 @@ require("keybindings")
 -------------------
 
 hl.on("hyprland.start", function ()
-  hl.exec_cmd("dunst")
+  hl.exec_cmd("swaync")
   hl.exec_cmd("quickshell")
   hl.exec_cmd("awww-daemon")
   hl.exec_cmd("awww img home/der_finn/.config/hypr/wallpapers/grove.png")
@@ -45,8 +45,8 @@ hl.env("MOZ_ENABLE_WAYLAND", "1")
 
 hl.config({
   general = {
-    gaps_in  = 3,
-    gaps_out = 6,
+    gaps_in  = 6,
+    gaps_out = 12,
 
     border_size = 2,
     col = {
@@ -60,7 +60,7 @@ hl.config({
   },
 
   decoration = {
-    rounding       = 12,
+    rounding       = 8,
     rounding_power = 2,
 
     active_opacity   = 0.9,

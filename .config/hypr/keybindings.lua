@@ -17,12 +17,19 @@ hl.bind("SHIFT + F11", hl.dsp.window.fullscreen({action = "toggle"}))
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))  -- dwindle only
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lockscreen))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("swaync-client -t -s"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
+
+-- Move window with mainMod + shift + control + arrow keys
+hl.bind(mainMod .. " + SHIFT + CONTROL + left",  hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + CONTROL + right", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + CONTROL + up",    hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + CONTROL + down",  hl.dsp.window.move({ direction = "down" }))
 
 -- Switch workspace with mainMod + control + arrow keys
 hl.bind(mainMod .. " + CONTROL + Left", hl.dsp.focus({ workspace = "r-1" }))
