@@ -20,20 +20,20 @@ end)
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 
-hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
-hl.env("XDG_SESSION_TYPE", "wayland")
-hl.env("XDG_SESSION_DESKTOP", "Hyprland")
+hl.env("XDG_CURRENT_DESKTOP",   "Hyprland")
+hl.env("XDG_SESSION_TYPE",      "wayland")
+hl.env("XDG_SESSION_DESKTOP",   "Hyprland")
 
-hl.env("CURSOR_THEME", "Bibata-Modern-Classic")
-hl.env("CURSOR_SIZE", "26")
+hl.env("CURSOR_THEME",          "Bibata-Modern-Classic")
+hl.env("CURSOR_SIZE",           "26")
 
-hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
-hl.env("XCURSOR_SIZE", "26")
+hl.env("XCURSOR_THEME",         "Bibata-Modern-Classic")
+hl.env("XCURSOR_SIZE",          "26")
 
-hl.env("GTK_THEME", "Gruvbox-Retro")
-hl.env("GDK_BACKEND", "wayland,x11")
-hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
-hl.env("QT_QPA_PLATFORM", "wayland;xcb")
+hl.env("GTK_THEME",             "Gruvbox-Retro")
+hl.env("GDK_BACKEND",           "wayland,x11")
+hl.env("QT_QPA_PLATFORMTHEME",  "qt5ct")
+hl.env("QT_QPA_PLATFORM",       "wayland;xcb")
 
 hl.env("MOZ_ENABLE_WAYLAND", "1")
 
@@ -43,32 +43,32 @@ hl.env("MOZ_ENABLE_WAYLAND", "1")
 
 hl.config({
   general = {
-    gaps_in  = 6,
-    gaps_out = 12,
+    gaps_in           = 6,
+    gaps_out          = 12,
 
-    border_size = 3,
+    border_size       = 3,
     col = {
-      active_border   = "rgba(60, 56, 54, 1)",
-      inactive_border = "rgba(50, 46, 44, 1)",
+      active_border   = "rgba(60, 56, 54, 0.7)",
+      inactive_border = "rgba(40, 36, 34, 0.7)",
     },
 
-    resize_on_border = false,
-    allow_tearing = false,
-    layout = "dwindle",
+    resize_on_border  = false,
+    allow_tearing     = false,
+    layout            = "dwindle",
   },
 
   decoration = {
-    rounding       = 8,
-    rounding_power = 2,
+    rounding          = 8,
+    rounding_power    = 2,
 
-    active_opacity   = 0.9,
-    inactive_opacity = 0.8,
+    active_opacity    = 0.9,
+    inactive_opacity  = 0.8,
 
     blur = {
-      enabled   = true,
-      size      = 3,
-      passes    = 1,
-      vibrancy  = 0.1696,
+      enabled         = true,
+      size            = 3,
+      passes          = 1,
+      vibrancy        = 0.1696,
     },
   },
 
@@ -79,7 +79,7 @@ hl.config({
 
 hl.config({
   dwindle = {
-    preserve_split = true,
+    preserve_split     = true,
   },
 })
 
@@ -89,13 +89,13 @@ hl.config({
 
 hl.config({
   input = {
-    kb_layout  = "de",
-    follow_mouse = 1,
+    kb_layout           = "de",
+    follow_mouse        = 1,
 
-    sensitivity = -0.5,
+    sensitivity         = -0.5,
 
     touchpad = {
-      natural_scroll = false,
+      natural_scroll    = false,
     },
   },
 })
