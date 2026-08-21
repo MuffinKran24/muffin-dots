@@ -21,6 +21,7 @@ window {
     outline: none;
 }
 
+/* Added horizontal margins so entries don't bleed past the window edges */
 #inner-box {
     margin: 0px 12px 12px 12px;
     border: none;
@@ -48,10 +49,14 @@ window {
     padding: 6px 10px;
     border-radius: 6px;
     background-color: transparent;
+    /* Keeps entries within container bounds */
+    margin: 0px 0px; 
 }
 
 #entry:selected {
     background-color: #fe8019;
+    /* Re-declare border-radius so Rofi doesn't reset it on selection */
+    border-radius: 6px;
 }
 
 #entry:selected #text {

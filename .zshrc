@@ -45,11 +45,19 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+# Completions
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
+
+if command -v dircolors >/dev/null 2>&1; then
+    eval "$(dircolors -b)"
+fi
+
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Aliases
-alias ls='ls --color'
+alias ls='ls --color=auto'
 alias ..='cd ..'
 
 neofetch

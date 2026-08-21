@@ -10,17 +10,15 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("swaync")
   hl.exec_cmd("quickshell")
   hl.exec_cmd("awww-daemon")
-  hl.exec_cmd("awww img home/der_finn/.config/hypr/wallpapers/grove.png")
+  hl.exec_cmd("awww img home/$USER/.config/hypr/wallpapers/grove.png")
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
   hl.exec_cmd("hyprctl setcursor $CURSOR_THEME $CURSOR_SIZE")
+  hl.exec_cmd("hyprpm reload")
 end)
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
-
-hl.env("XDG_CONFIG_HOME", "/home/der_finn/.config")
-hl.env("XDG_CACHE_HOME", "/home/der_finn/.cache")
 
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
@@ -118,9 +116,14 @@ hl.window_rule({
 })
 
 hl.window_rule({
-  match = { class = "kitty", "obsidian"},
+  match = { class = "kitty" },
   opaque = false,
 })
+
+hl.window_rule(({
+  match = { class = "md.obsidian.Obsidian" },
+  opaque = false,
+}))
 
 hl.window_rule({
   -- Fix some dragging issues with XWayland
