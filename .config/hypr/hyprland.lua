@@ -46,7 +46,7 @@ hl.config({
     gaps_in  = 6,
     gaps_out = 12,
 
-    border_size = 2,
+    border_size = 3,
     col = {
       active_border   = "rgba(60, 56, 54, 1)",
       inactive_border = "rgba(50, 46, 44, 1)",
