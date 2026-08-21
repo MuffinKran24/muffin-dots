@@ -1,5 +1,5 @@
 * {
-  font-family: JetBrainsMono Nerd Font Mono;
+  font-family: JetBrainsMono Nerd Font;
   font-weight: bold;
 }
 
@@ -158,7 +158,7 @@
 .control-center {
   background: #282828;
   border: 2px solid #8ec07c;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .control-center-list {

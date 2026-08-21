@@ -1,69 +1,50 @@
-window {
-    margin: 0px;
-    border: 2px solid #504945;
-    border-radius: 12px;
-    background-color: #282828;
-    font-family: "JetBrains Mono", sans-serif;
-    font-size: 14px;
+/* The name of the window itself */
+#window {
+  background-color: rgba(40, 40, 40, 0.6);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  /* The name of the box that contains everything */
 }
-
-#input {
-    margin: 12px;
-    padding: 8px 12px;
-    border: 1px solid #3c3836;
-    border-radius: 8px;
-    color: #ebdbb2;
-    background-color: #1d2021;
+#window #outer-box {
+  /* The name of the search bar */
+  /* The name of the scrolled window containing all of the entries */
 }
-
-#input:focus {
-    border: 1px solid #fe8019;
-    outline: none;
+#window #outer-box #input {
+  background-color: rgba(40, 40, 40, 0.6);
+  color: #f2f2f2;
+  border: none;
+  border-bottom: 1px solid rgba(24, 24, 24, 0.2);
+  padding: 0.8rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 1rem 1rem 0 0;
 }
-
-/* Added horizontal margins so entries don't bleed past the window edges */
-#inner-box {
-    margin: 0px 12px 12px 12px;
-    border: none;
-    background-color: transparent;
+#window #outer-box #input:focus, #window #outer-box #input:focus-visible, #window #outer-box #input:active {
+  border: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
-
-#outer-box {
-    margin: 0px;
-    border: none;
-    background-color: transparent;
+#window #outer-box #scroll {
+  /* The name of the box containing all of the entries */
 }
-
-#scroll {
-    margin: 0px;
-    border: none;
+#window #outer-box #scroll #inner-box {
+  /* The name of all entries */
+  /* The name of all boxes shown when expanding  */
+  /* entries with multiple actions */
 }
-
-#text {
-    margin: 4px;
-    border: none;
-    color: #ebdbb2;
+#window #outer-box #scroll #inner-box #entry {
+  color: #fff;
+  background-color: rgba(24, 24, 24, 0.1);
+  padding: 0.6rem 1rem;
+  /* The name of all images in entries displayed in image mode */
+  /* The name of all the text in entries */
 }
-
-#entry {
-    padding: 6px 10px;
-    border-radius: 6px;
-    background-color: transparent;
-    /* Keeps entries within container bounds */
-    margin: 0px 0px; 
+#window #outer-box #scroll #inner-box #entry #img {
+  width: 1rem;
+  margin-right: 0.5rem;
 }
-
-#entry:selected {
-    background-color: #fe8019;
-    /* Re-declare border-radius so Rofi doesn't reset it on selection */
-    border-radius: 6px;
-}
-
-#entry:selected #text {
-    color: #282828;
-    font-weight: bold;
-}
-
-#img {
-    margin-right: 10px;
+#window #outer-box #scroll #inner-box #entry:selected {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
 }
