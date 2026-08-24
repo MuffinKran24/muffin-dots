@@ -26,10 +26,12 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab
 
 zinit snippet OMZP::git
 
 # Keybindings
+bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
@@ -44,17 +46,21 @@ setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
+setopt hist_find_no_dups
 
 # Completions
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*' menu select
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 if command -v dircolors >/dev/null 2>&1; then
     eval "$(dircolors -b)"
 fi
 
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+eval "$(fzf --zsh)"
 
 # Aliases
 alias ls='ls --color=auto'
