@@ -6,4 +6,3 @@ show_all=true
 dynamic_lines=true
 allow_images=true
 image_size=28
-normal_window=true

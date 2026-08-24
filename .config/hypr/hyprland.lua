@@ -14,12 +14,9 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
   hl.exec_cmd("hyprctl setcursor $CURSOR_THEME $CURSOR_SIZE")
   hl.exec_cmd("hyprpm reload")
-  hl.exec_cmd("gsettings set org.gnome.desktop.interface font-name 'JetBrainsMono Nerd Font 10'")
-  hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
-  hl.exec_cmd("gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Classic'")
-  hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'Gruvbox-Retro'")
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
   hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+  hl.exec_cmd("xsettingsd")
 end)
 
 -------------------------------
@@ -49,9 +46,9 @@ hl.env("MOZ_ENABLE_WAYLAND", "1")
 hl.config({
   general = {
     gaps_in           = 6,
-    gaps_out          = 12,
+    gaps_out          = 10,
 
-    border_size       = 3,
+    border_size       = 2,
     col = {
       active_border   = "rgba(60, 56, 54, 0.7)",
       inactive_border = "rgba(40, 36, 34, 0.7)",
