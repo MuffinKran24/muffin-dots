@@ -8,10 +8,15 @@ maybe I will someday write a install script for this
 ```bash
 pacman -S stow
 ```
+after installing stow, run 
+```bash
+stow .
+``` 
+in the main dotfiles directory
 
 ### Hyprland
 ```bash
-pacman -S hyprland hyprlock awww kitty hyprpm wofi qt5ct gtk3 gtk4 fontconfig swaync
+pacman -S hyprland hyprlock awww kitty hyprpm wofi qt5ct gtk3 gtk4 xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-desktop-portal xsettingsd fontconfig swaync
 ```
 
 #### Hyprland plugins
@@ -24,9 +29,9 @@ hyprpm reload
 
 ### Zsh
 ```bash
-pacman -S zsh
+pacman -S zsh fzf
 ```
-after installing zsh set it as your login shell
+after installing zsh, set it as your login shell
 
 ```bash
 chsh $USER

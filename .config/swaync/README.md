@@ -1,1 +1,1 @@
-i got "inspiration" a [friends config](https://github.com/EinSatzMitX/dotfiles/tree/master/.config/swaync)
+i got "inspiration" from a [friends config](https://github.com/EinSatzMitX/dotfiles/tree/master/.config/swaync)

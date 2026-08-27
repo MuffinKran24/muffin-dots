@@ -1,6 +1,7 @@
 require("monitors")
 require("animations")
 require("keybindings")
+require("windowrules")
 
 -------------------
 ---- AUTOSTART ----
@@ -46,12 +47,12 @@ hl.env("MOZ_ENABLE_WAYLAND", "1")
 hl.config({
   general = {
     gaps_in           = 6,
-    gaps_out          = 10,
+    gaps_out          = 12,
 
     border_size       = 2,
     col = {
-      active_border   = "rgba(60, 56, 54, 0.7)",
-      inactive_border = "rgba(40, 36, 34, 0.7)",
+      active_border   = "rgba(215, 153, 33, 1)",
+      inactive_border = "rgba(215, 153, 33, 0.5)",
     },
 
     resize_on_border  = false,
@@ -60,11 +61,11 @@ hl.config({
   },
 
   decoration = {
-    rounding          = 8,
-    rounding_power    = 2,
+    rounding          = 24,
+    rounding_power    = 1,
 
-    active_opacity    = 0.9,
-    inactive_opacity  = 0.8,
+    active_opacity    = 1,
+    inactive_opacity  = 1,
 
     blur = {
       enabled         = true,
@@ -77,9 +78,7 @@ hl.config({
   xwayland = {
     force_zero_scaling = true
   },
-})
 
-hl.config({
   dwindle = {
     preserve_split     = true,
   },
@@ -100,52 +99,4 @@ hl.config({
       natural_scroll    = false,
     },
   },
-})
-
---------------------------------
----- WINDOWS AND WORKSPACES ----
---------------------------------
-
-hl.window_rule({
-  name  = "suppress-maximize-events",
-  match = { class = ".*" },
-  suppress_event = "maximize",
-})
-
-hl.window_rule({
-  match = { class = ".*" },
-  opaque = true,
-})
-
-hl.window_rule({
-  match = { class = "kitty" },
-  opaque = false,
-})
-
-hl.window_rule(({
-  match = { class = "md.obsidian.Obsidian" },
-  opaque = false,
-}))
-
-hl.window_rule({
-  -- Fix some dragging issues with XWayland
-  name  = "fix-xwayland-drags",
-  match = {
-    class      = "^$",
-    title      = "^$",
-    xwayland   = true,
-    float      = true,
-    fullscreen = false,
-    pin        = false,
-  },
-  no_focus = true,
-})
-
--- Hyprland-run windowrule
-hl.window_rule({
-  name  = "move-hyprland-run",
-  match = { class = "hyprland-run" },
-
-  move  = "20 monitor_h-120",
-  float = true,
 })
