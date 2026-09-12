@@ -22,9 +22,9 @@ Scope {
   property color colGreen: "#98971a"
   property color colOrange: "#fe8019"
 
-  property string fontFamily: "JetbrainsMono Nerd Font"
+  property string fontFamily: "DepartureMono Nerd Font"
   property int fontSize: 14
-  property int bubbleRadius: 12
+  property int bubbleRadius: 5
 
   readonly property PwNode sink: Pipewire.defaultAudioSink
   readonly property PwNode source: Pipewire.defaultAudioSource

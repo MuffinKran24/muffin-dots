@@ -1,5 +1,5 @@
 * {
-  font-family: JetBrainsMono Nerd Font;
+  font-family: DepartureMono Nerd Font;
   font-weight: bold;
 }
 
@@ -220,7 +220,6 @@
 
 .widget-dnd > switch:checked {
   background: #fb4934;
-  border: 1px solid #fb4934;
 }
 
 .widget-dnd > switch slider {
