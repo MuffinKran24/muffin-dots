@@ -24,10 +24,3 @@ vim.filetype.add({
     ino = 'cpp',
   },
 })
-
-vim.api.nvim_create_user_command('W', 'w', {}) -- set :W as write too because of my typos
-vim.api.nvim_create_user_command('Wq', 'wq', {})
-vim.api.nvim_create_user_command('Wqa', 'wqa', {})
-
-vim.api.nvim_create_user_command('Q', 'q', {})
-vim.api.nvim_create_user_command('Qa', 'qa', {})

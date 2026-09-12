@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/sh
 
 if pgrep -f "wofi --show drun" > /dev/null; then
     killall wofi
