@@ -38,7 +38,7 @@ hl.env("GDK_BACKEND",           "wayland,x11")
 hl.env("QT_QPA_PLATFORMTHEME",  "qt5ct")
 hl.env("QT_QPA_PLATFORM",       "wayland;xcb")
 
-hl.env("MOZ_ENABLE_WAYLAND", "1")
+hl.env("MOZ_ENABLE_WAYLAND",    "1")
 
 -----------------------
 ---- LOOK AND FEEL ----
@@ -51,8 +51,8 @@ hl.config({
 
     border_size       = 2,
     col = {
-      active_border   = "rgba(215, 153, 33, 1)",
-      inactive_border = "rgba(215, 153, 33, 0.5)",
+      active_border   = "rgba(184, 187, 38, 1)",
+      inactive_border = "rgba(184, 187, 38, 0.5)",
     },
 
     resize_on_border  = false,
@@ -61,7 +61,7 @@ hl.config({
   },
 
   decoration = {
-    rounding          = 24,
+    rounding          = 20,
     rounding_power    = 1,
 
     active_opacity    = 1,

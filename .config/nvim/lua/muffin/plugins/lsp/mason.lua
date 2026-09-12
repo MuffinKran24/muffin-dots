@@ -6,6 +6,7 @@ return {
         "lua_ls",
         "pyright",
         "html",
+        "cssls",
         "rust_analyzer",
         "vimls",
       },

@@ -5,6 +5,16 @@ sort_dir_first = true
 linemode = "size"
 show_hidden = true
 
+[[plugin.prepend_fetchers]]
+url   = "*"
+run   = "git"
+group = "git"
+
+[[plugin.prepend_fetchers]]
+url   = "*/"
+run   = "git"
+group = "git"
+
 [preview]
 tab_size = 2
 

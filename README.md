@@ -1,5 +1,7 @@
 # my new dotfiles repo
 
+gruvbox dark styled hyprland desktop
+
 ## Dependencies
 
 maybe I will someday write a install script for this
@@ -32,7 +34,6 @@ hyprpm reload
 pacman -S zsh fzf
 ```
 after installing zsh, set it as your login shell
-
 ```bash
 chsh $USER
 ```
