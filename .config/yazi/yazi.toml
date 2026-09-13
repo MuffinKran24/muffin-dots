@@ -5,6 +5,10 @@ sort_dir_first = true
 linemode = "size"
 show_hidden = true
 
+[[mgr.prepend_keymap]]
+on  = "y"
+run = [ "shell -- echo %s | xclip -i -selection clipboard -t text/uri-list", "yank" ]
+
 [[plugin.prepend_fetchers]]
 url   = "*"
 run   = "git"
@@ -17,6 +21,7 @@ group = "git"
 
 [preview]
 tab_size = 2
+
 
 [opener]
 edit = [

@@ -1,1 +1,4 @@
-my new hyprland config in lua
+# my new hyprland config in lua
+
+# to-do
+- [ ] wallpaper switcher

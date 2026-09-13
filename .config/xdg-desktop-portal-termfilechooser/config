@@ -1,0 +1,10 @@
+[config]
+default=yazi
+
+[yazi]
+cmd=/home/$USER/.config/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh
+
+[filechooser]
+default_dir=$HOME
+open_mode = suggested
+save_mode = last
