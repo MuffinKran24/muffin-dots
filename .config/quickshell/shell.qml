@@ -94,35 +94,15 @@ Scope {
           }
         }
 
-        // window title
+        // filler
         Rectangle {
           Layout.fillWidth: true
           implicitHeight: 30
           color: root.colBg
           radius: root.bubbleRadius
-          visible: (Hyprland.activeToplevel?.title ?? "") !== ""
-
-          RowLayout {
-            anchors.fill: parent
-            anchors.leftMargin: 10
-            anchors.rightMargin: 10
-
-            Text {
-              id: windowTitle
-              Layout.fillWidth: true
-              elide: Text.ElideRight
-              text: Hyprland.activeToplevel?.title ?? ""
-              color: root.colFg
-              font { family: root.fontFamily; pixelSize: root.fontSize; bold: false }
-            }
-          }
-        }
-
-        Item {
-          Layout.fillWidth: true
-          visible: !windowTitle.parent.visible
-        }
-
+          visible: true
+        }  
+          
         // system tray
         Rectangle {
           color: root.colBg

@@ -1,6 +1,9 @@
 hl.window_rule({
   match = { initial_title = "termfilechooser" },
-  float = false,
+  float = true,
+  center = true,
+  size = {1200, 800},
+  stay_focused = true,
 })
 
 hl.window_rule({

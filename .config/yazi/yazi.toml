@@ -5,10 +5,6 @@ sort_dir_first = true
 linemode = "size"
 show_hidden = true
 
-[[mgr.prepend_keymap]]
-on  = "y"
-run = [ "shell -- echo %s | xclip -i -selection clipboard -t text/uri-list", "yank" ]
-
 [[plugin.prepend_fetchers]]
 url   = "*"
 run   = "git"
@@ -22,25 +18,24 @@ group = "git"
 [preview]
 tab_size = 2
 
-
 [opener]
 edit = [
-  { run = 'nvim "$@"', block = true, for = "unix" },
+  { run = "nvim %s", block = true, for = "unix" },
 ]
 vlc = [
-  { run = 'vlc "$@"', orphan = true, for = "unix" },
+  { run = "vlc %s", orphan = true, for = "unix" },
 ]
 pdf = [
-  { run = 'firefox "$@"', orphan = true, for = "unix" },
+  { run = "firefox %s", orphan = true, for = "unix" },
 ]
 office = [
-  { run = 'libreoffice "$@"', orphan = true, for = "unix" },
+  { run = "libreoffice %s", orphan = true, for = "unix" },
 ]
 pictures = [
-  { run = 'geeqie "$@"', orphan = true, for = "unix" },
+  { run = "nsxiv %s", orphan = true, for = "unix" },
 ]
 play = [
-  { run = 'xdg-open "$@"', desc = "Open" },
+  { run = "xdg-open %s", desc = "Open" },
 ]
 
 [open]
@@ -48,11 +43,12 @@ rules = [
   { mime = "image/*", use = [ "pictures", "play" ] },
   { mime = "{audio,video}/*", use = [ "vlc", "play" ] },
   { mime = "application/pdf", use = [ "pdf", "play" ] },
-    
+  { mime = "text/", use = [ "edit", "play" ] },
+
   # LibreOffice
   { mime = "application/vnd.oasis.opendocument.*", use = [ "office", "play" ] },
   { mime = "application/vnd.openxmlformats-officedocument.*", use = [ "office", "play" ] },
     
   # Everything else
-  { mime = "*", use = [ "edit", "play" ] },
+  { mime = "*/", use = [ "edit", "play" ] }
 ]
