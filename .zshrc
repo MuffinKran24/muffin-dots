@@ -8,6 +8,7 @@ fi
 export DOTNET_ROOT=/usr/share/dotnet/
 export PATH=$DOTNET_ROOT:$PATH
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
+export TERM="xterm-256color"
 . "$HOME/.cargo/env"
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -62,11 +63,19 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 eval "$(fzf --zsh)"
 
+function y() {
+	local tmp cwd; tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
+	command rm -f -- "$tmp"
+}
+
 # Aliases
 alias ls='ls --color=auto'
 alias ..='cd ..'
 
-neofetch
+fastfetch --pipe false
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

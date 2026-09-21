@@ -5,19 +5,20 @@ local fileManager = "dolphin"
 local menu = "~/.config/hypr/scripts/wofi.sh"
 local browser = "firefox"
 local lockscreen = "hyprlock -q"
+local notification = "swaync-client -t -s"
 
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + DELETE", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + Tab", hl.plugin.hymission.toggle)
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + W", hl.dsp.window.float({action = "toggle"}))
 hl.bind("SHIFT + F11", hl.dsp.window.fullscreen({action = "toggle"}))
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))  -- dwindle only
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lockscreen))
-hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("swaync-client -t -s"))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(notification))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))

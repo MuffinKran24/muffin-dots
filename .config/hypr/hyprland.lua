@@ -64,14 +64,21 @@ hl.config({
     rounding          = 20,
     rounding_power    = 1,
 
-    active_opacity    = 1,
-    inactive_opacity  = 1,
+    -- the windowrules make most windows opaque so this only affects a selected few
+    active_opacity    = 0.90,
+    inactive_opacity  = 0.85,
 
     blur = {
       enabled         = true,
-      size            = 3,
+      size            = 2,
       passes          = 1,
       vibrancy        = 0.1696,
+    },
+
+    shadow = {
+      enabled         = true,
+      range           = 20,
+      render_power    = 4,
     },
   },
 
@@ -92,8 +99,10 @@ hl.config({
   input = {
     kb_layout           = "de",
     follow_mouse        = 1,
+    focus_on_close      = 1,
+    numlock_by_default  = true,
 
-    sensitivity         = -0.5,
+    sensitivity         = -0.3,
 
     touchpad = {
       natural_scroll    = false,
