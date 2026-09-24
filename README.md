@@ -31,7 +31,7 @@ hyprpm reload
 
 ### Zsh
 ```bash
-pacman -S zsh fzf
+pacman -S zsh fzf fastfetch
 ```
 after installing zsh, set it as your login shell
 ```bash
@@ -46,6 +46,7 @@ pacman -S quickshell
 ### Yazi
 ```bash
 pacman -S yazi
+ya pkg add yazi-rs/plugins:git
 ```
 
 ### NeoVim

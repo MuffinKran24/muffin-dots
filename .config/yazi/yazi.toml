@@ -27,46 +27,51 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 edit = [
-	{ run = "nvim %s",          desc = "nvim",         for = "unix", block = true },
-	{ run = "code %s",          desc = "code",         for = "windows", orphan = true },
-	{ run = "code -w %s",       desc = "code (block)", for = "windows", block = true },
+	{ run = "nvim %s", desc = "Edit", block = true },
 ]
 play = [
-	{ run = "xdg-open %s1",    desc = "Play", for = "linux", orphan = true },
-	{ run = "open %s",         desc = "Play", for = "macos" },
-	{ run = 'start "" %s1',    desc = "Play", for = "windows", orphan = true },
-	{ run = "termux-open %s1", desc = "Play", for = "android" },
-	{ run = "mediainfo %s1; echo 'Press enter to exit'; read _", block = true, desc = "Show media info", for = "unix" },
-	{ run = "mediainfo %s1 & pause", block = true, desc = "Show media info", for = "windows" },
+	{ run = "vlc %s1", desc = "Play", orphan = true },
+	{ run = "mediainfo %s1; echo 'Press enter to exit'; read _", block = true, desc = "Show media info" },
 ]
 open = [
-	{ run = "xdg-open %s1",    desc = "Open", for = "linux" },
-	{ run = "open %s",         desc = "Open", for = "macos" },
-	{ run = 'start "" %s1',    desc = "Open", for = "windows", orphan = true },
-	{ run = "termux-open %s1", desc = "Open", for = "android" },
+	{ run = "nsxiv %s1", desc = "Open" },
 ]
 reveal = [
-	{ run = "xdg-open %d1",         desc = "Reveal", for = "linux" },
-	{ run = "open -R %s1",          desc = "Reveal", for = "macos" },
-	{ run = "explorer /select,%s1", desc = "Reveal", for = "windows", orphan = true },
-	{ run = "termux-open %d1",      desc = "Reveal", for = "android" },
-	{ run = "clear; exiftool %s1; echo 'Press enter to exit'; read _", desc = "Show EXIF", for = "unix", block = true },
+	{ run = "xdg-open %d1", desc = "Reveal" },
+	{ run = "clear; exiftool %s1; echo 'Press enter to exit'; read _", desc = "Show EXIF", block = true },
 ]
 extract = [
 	{ run = "ya pub extract --list %s", desc = "Extract here" },
 ]
 download = [
 	{ run = "ya emit download --open %S", desc = "Download and open" },
-	{ run = "ya emit download %S",        desc = "Download" },
+	{ run = "ya emit download %S", desc = "Download" },
 ]
 trash = [
 	{ run = "ya pub trash-restore --list %S", desc = "Restore selected files" },
-	{ run = "ya pub trash-empty --list %S",   desc = "Empty trash bin" },
+	{ run = "ya pub trash-empty --list %S", desc = "Empty trash bin" },
 ]
+aseprite = [
+  { run = "aseprite %s", orphan = true },
+]
+office = [
+  { run = "libreoffice %s", orphan = true },
+]
+wine = [
+  { run = "wine %s", orphan = true },
+]
+
 
 [open]
 rules = [
-	# Folder
+  # Wine applications
+  { mime = "application/microsoft.portable-executable", use = "wine" },
+  # Office
+  { mime = "application/oasis.opendocument.*", use = "office" },
+  { mime = "application/openxmlformats-officedocument.*", use = "office" },
+  # Aseprite
+	{ mime = "image/aseprite", use = "aseprite" },
+  # Folder
 	{ mime = "folder/*", use = [ "edit", "open", "reveal" ] },
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
