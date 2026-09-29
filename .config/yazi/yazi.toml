@@ -12,7 +12,6 @@ show_symlink   = true
 scrolloff      = 5
 mouse_events   = [ "click", "scroll", "drag" ]
 
-
 [preview]
 wrap            = "no"
 tab_size        = 2
@@ -34,7 +33,7 @@ play = [
 	{ run = "mediainfo %s1; echo 'Press enter to exit'; read _", block = true, desc = "Show media info" },
 ]
 open = [
-	{ run = "nsxiv %s1", desc = "Open" },
+	{ run = "xdg-open %s1", desc = "Open" },
 ]
 reveal = [
 	{ run = "xdg-open %d1", desc = "Reveal" },
@@ -61,7 +60,6 @@ wine = [
   { run = "wine %s", orphan = true },
 ]
 
-
 [open]
 rules = [
   # Wine applications
@@ -69,6 +67,7 @@ rules = [
   # Office
   { mime = "application/oasis.opendocument.*", use = "office" },
   { mime = "application/openxmlformats-officedocument.*", use = "office" },
+  { mime = "application/pdf", use = "office" },
   # Aseprite
 	{ mime = "image/aseprite", use = "aseprite" },
   # Folder

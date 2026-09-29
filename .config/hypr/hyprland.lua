@@ -61,8 +61,8 @@ hl.config({
   },
 
   decoration = {
-    rounding          = 20,
-    rounding_power    = 1,
+    rounding          = 12,
+    rounding_power    = 6,
 
     -- the windowrules make most windows opaque so this only affects a selected few
     active_opacity    = 0.90,

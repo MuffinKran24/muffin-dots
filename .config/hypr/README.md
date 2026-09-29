@@ -2,3 +2,4 @@
 
 # to-do
 - [ ] wallpaper switcher
+- [ ] emoji/glyph picker
