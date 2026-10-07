@@ -5,6 +5,7 @@ configuration {
   font: "DepartureMono Nerd Font Medium 12";
   modi: "window,run,drun";
   show-icons: true;
+  icon-theme: "Papirus";
 }
 
 @theme "/dev/null"

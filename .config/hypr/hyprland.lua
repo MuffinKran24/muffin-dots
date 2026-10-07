@@ -3,9 +3,6 @@ require("animations")
 require("keybindings")
 require("windowrules")
 
--------------------
----- AUTOSTART ----
--------------------
 
 hl.on("hyprland.start", function ()
   hl.exec_cmd("swaync")
@@ -20,19 +17,16 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("xsettingsd")
 end)
 
--------------------------------
----- ENVIRONMENT VARIABLES ----
--------------------------------
 
 hl.env("XDG_CURRENT_DESKTOP",   "Hyprland")
 hl.env("XDG_SESSION_TYPE",      "wayland")
 hl.env("XDG_SESSION_DESKTOP",   "Hyprland")
 
 hl.env("CURSOR_THEME",          "Bibata-Modern-Classic")
-hl.env("CURSOR_SIZE",           "26")
+hl.env("CURSOR_SIZE",           "22")
 
 hl.env("XCURSOR_THEME",         "Bibata-Modern-Classic")
-hl.env("XCURSOR_SIZE",          "26")
+hl.env("XCURSOR_SIZE",          "22")
 
 hl.env("GDK_BACKEND",           "wayland,x11")
 hl.env("QT_QPA_PLATFORMTHEME",  "qt5ct")
@@ -40,9 +34,6 @@ hl.env("QT_QPA_PLATFORM",       "wayland;xcb")
 
 hl.env("MOZ_ENABLE_WAYLAND",    "1")
 
------------------------
----- LOOK AND FEEL ----
------------------------
 
 hl.config({
   general = {
@@ -88,24 +79,5 @@ hl.config({
 
   dwindle = {
     preserve_split     = true,
-  },
-})
-
----------------
----- INPUT ----
----------------
-
-hl.config({
-  input = {
-    kb_layout           = "de",
-    follow_mouse        = 1,
-    focus_on_close      = 1,
-    numlock_by_default  = true,
-
-    sensitivity         = -0.3,
-
-    touchpad = {
-      natural_scroll    = false,
-    },
   },
 })

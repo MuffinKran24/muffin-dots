@@ -45,13 +45,13 @@ Scope {
       anchors.top: true
       anchors.left: true
       anchors.right: true
-      implicitHeight: 40
+      implicitHeight: 36
       color: "transparent"
 
       RowLayout {
         anchors.fill: parent
         anchors.margins: 6
-        spacing: 6
+        spacing: 8
 
         // workspaces
         Rectangle {
@@ -63,7 +63,7 @@ Scope {
           RowLayout {
             id: wsRow
             anchors.centerIn: parent
-            spacing: 8
+            spacing: 6
 
             Repeater {
               model: {
@@ -231,13 +231,13 @@ Scope {
             anchors.centerIn: parent
             color: root.colOrange
             font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
-            text: Qt.formatDateTime(new Date(), " ddd, MMM dd - HH:mm:ss ")
+            text: Qt.formatDateTime(new Date(), " ddd, dd. MMM - HH:mm:ss ")
 
             Timer {
               interval: 1000
               running: true
               repeat: true
-              onTriggered: clockText.text = Qt.formatDateTime(new Date(), " ddd, MMM dd - HH:mm:ss ")
+              onTriggered: clockText.text = Qt.formatDateTime(new Date(), " ddd, dd. MMM - HH:mm:ss ")
             }
           }
         }

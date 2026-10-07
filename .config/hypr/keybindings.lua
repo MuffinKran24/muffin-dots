@@ -1,3 +1,18 @@
+hl.config({
+  input = {
+    kb_layout           = "de",
+    follow_mouse        = 1,
+    focus_on_close      = 1,
+    numlock_by_default  = true,
+
+    sensitivity         = -0.3,
+
+    touchpad = {
+      natural_scroll    = false,
+    },
+  },
+})
+
 local mainMod = "SUPER"
 
 local terminal      = "kitty"
