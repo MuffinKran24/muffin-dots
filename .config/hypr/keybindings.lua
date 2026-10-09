@@ -20,6 +20,7 @@ local fileManager   = "dolphin"
 local browser       = "firefox"
 local lockscreen    = "hyprlock -q"
 local notification  = "swaync-client -t -s"
+local wallpaper     = "~/.config/hypr/scripts/wallpaper.sh"
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + DELETE", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
@@ -34,6 +35,7 @@ hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("rofi -show run"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lockscreen))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(notification))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(wallpaper))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))

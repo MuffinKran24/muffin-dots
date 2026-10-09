@@ -1,5 +1,5 @@
 # my new hyprland config in lua
 
 # to-do
-- [ ] wallpaper switcher
+- [x] wallpaper switcher
 - [ ] emoji/glyph picker
