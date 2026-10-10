@@ -4,19 +4,6 @@ require("keybindings")
 require("windowrules")
 
 
-hl.on("hyprland.start", function ()
-  hl.exec_cmd("swaync")
-  hl.exec_cmd("quickshell")
-  hl.exec_cmd("~/.local/bin/hypr-wallpaper.sh --restore")
-  hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
-  hl.exec_cmd("hyprctl setcursor $CURSOR_THEME $CURSOR_SIZE")
-  hl.exec_cmd("hyprpm reload")
-  hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
-  hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
-  hl.exec_cmd("xsettingsd")
-end)
-
-
 hl.env("XDG_CURRENT_DESKTOP",   "Hyprland")
 hl.env("XDG_SESSION_TYPE",      "wayland")
 hl.env("XDG_SESSION_DESKTOP",   "Hyprland")
@@ -32,6 +19,19 @@ hl.env("QT_QPA_PLATFORMTHEME",  "qt5ct")
 hl.env("QT_QPA_PLATFORM",       "wayland;xcb")
 
 hl.env("MOZ_ENABLE_WAYLAND",    "1")
+
+
+hl.on("hyprland.start", function ()
+  hl.exec_cmd("swaync")
+  hl.exec_cmd("quickshell")
+  hl.exec_cmd("~/.config/hypr/scripts/wallpaper.sh --restore")
+  hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+  hl.exec_cmd("hyprctl setcursor $CURSOR_THEME $CURSOR_SIZE")
+  hl.exec_cmd("hyprpm reload")
+  hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+  hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+  hl.exec_cmd("xsettingsd")
+end)
 
 
 hl.config({

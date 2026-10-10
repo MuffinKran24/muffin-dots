@@ -17,7 +17,6 @@ local mainMod = "SUPER"
 
 local terminal      = "kitty"
 local fileManager   = "dolphin"
-local browser       = "firefox"
 local lockscreen    = "hyprlock -q"
 local notification  = "swaync-client -t -s"
 local wallpaper     = "~/.config/hypr/scripts/wallpaper.sh"
@@ -32,7 +31,6 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("rofi -show run"))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lockscreen))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(notification))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(wallpaper))
@@ -89,6 +87,7 @@ hl.bind(mainMod .. " + F11", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SI
 hl.bind(mainMod .. " + F10", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),     { locked = true, repeating = true })
 hl.bind(mainMod .. " + F9",  hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = true })
 
+-- Screenshot
 -- whole screen
 hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("grim - | wl-copy"))
 
@@ -97,12 +96,13 @@ hl.bind(mainMod .. " + ALT + P", hl.dsp.exec_cmd([[
   bash -c 'grim -o "$(hyprctl activeworkspace -j | jq -r .monitor)" - | wl-copy'
 ]]))
 
+-- selection
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | wl-copy]]))
+
 -- selection and freeze
 hl.bind(mainMod .. " + CONTROL + P", hl.dsp.exec_cmd([[
   bash -c 'hyprpicker -r -z & PICKER_PID=$!; slurp | grim -g - - | wl-copy; kill $PICKER_PID 2>/dev/null'
 ]]))
 
--- selection
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | wl-copy]]))
-
+-- color picker
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("hyprpicker -an"))

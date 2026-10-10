@@ -12,19 +12,29 @@ if ! pgrep -x "awww-daemon" > /dev/null; then
 fi
 
 set_wallpaper() {
-    local img="$1"
-    if [ -f "$img" ]; then
-        awww img "$img"
-        echo "$img" > "$SAVED_WALLPAPER"
-    fi
+  local img="$1"
+  if [ -f "$img" ]; then
+    awww img "$img"
+    echo "$img" > "$SAVED_WALLPAPER"
+    cat <<EOF > "$HOME/.config/hypr/hyprlock_bg.conf"
+background {
+  monitor =
+  path = $img
+  blur_passes = 3
+  blur_size = 3
+  contrast = 1.2
+  brightness = 0.8916
+}
+EOF
+  fi
 }
 
 if [ "$1" == "--restore" ]; then
-    if [ -f "$SAVED_WALLPAPER" ]; then
-        RESTORE_IMG=$(cat "$SAVED_WALLPAPER")
-        set_wallpaper "$RESTORE_IMG"
-    fi
-    exit 0
+  if [ -f "$SAVED_WALLPAPER" ]; then
+    RESTORE_IMG=$(cat "$SAVED_WALLPAPER")
+    set_wallpaper "$RESTORE_IMG"
+  fi
+  exit 0
 fi
 
 ROFI_INPUT=""
