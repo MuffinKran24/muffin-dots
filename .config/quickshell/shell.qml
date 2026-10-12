@@ -12,7 +12,7 @@ import QtQuick.Layouts
 Scope {
   id: root
 
-  property color colBg: "#282828"
+  property color colBg: "#1d2021"
   property color colFg: "#ebdbb2"
   property color colMuted: "#665c54"
   property color colCyan: "#83a598"
@@ -24,7 +24,7 @@ Scope {
 
   property string fontFamily: "DepartureMono Nerd Font"
   property int fontSize: 15
-  property int bubbleRadius: 5
+  property int bubbleRadius: 10
 
   readonly property PwNode sink: Pipewire.defaultAudioSink
   readonly property PwNode source: Pipewire.defaultAudioSource

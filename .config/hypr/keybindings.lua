@@ -34,6 +34,7 @@ hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("rofi -show run"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lockscreen))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(notification))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(wallpaper))
+hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd("rofi -show emoji"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
