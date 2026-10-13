@@ -14,7 +14,7 @@ fi
 set_wallpaper() {
   local img="$1"
   if [ -f "$img" ]; then
-    awww img "$img"
+    awww img --transition-type outer --transition-pos 0.90,0.85 --transition-step 255 --transition-fps 60 "$img"
     echo "$img" > "$SAVED_WALLPAPER"
     cat <<EOF > "$HOME/.config/hypr/hyprlock_bg.conf"
 background {
