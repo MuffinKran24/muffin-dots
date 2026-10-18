@@ -22,7 +22,7 @@ Scope {
   property color colGreen: "#98971a"
   property color colOrange: "#fe8019"
 
-  property string fontFamily: "DepartureMono Nerd Font"
+  property string fontFamily: "BigBlueTerm437 Nerd Font"
   property int fontSize: 15
   property int bubbleRadius: 10
 
