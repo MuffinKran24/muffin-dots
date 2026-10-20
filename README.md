@@ -13,12 +13,12 @@ pacman -S stow
 after installing stow, run 
 ```bash
 stow .
-``` 
+```
 in the main dotfiles directory
 
 ### Hyprland
 ```bash
-pacman -S hyprland hyprlock awww kitty hyprpm rofi qt5ct gtk3 gtk4 xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-desktop-portal xsettingsd fontconfig swaync
+pacman -S hyprland hyprlock awww kitty hyprpm rofi qt5ct qt6ct gtk3 gtk4 xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-desktop-portal xsettingsd fontconfig swaync
 ```
 
 #### Hyprland plugins
@@ -47,6 +47,10 @@ pacman -S quickshell
 ```bash
 pacman -S yazi
 ya pkg add yazi-rs/plugins:git
+```
+to use yazi as filepicker you need to install "xdg-desktop-portal-termfilechooser" from the AUR
+```bash
+yay -S xdg-desktop-portal-termfilechooser
 ```
 
 ### NeoVim

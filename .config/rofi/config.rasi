@@ -1,8 +1,8 @@
 configuration {
   display-drun: "Applications:";
-  display-window: "Windows:";
   drun-display-format: "{icon} {name}";
-  font: "BigBlueTerm437 Nerd Font Medium 12";
+  display-run: "Run:";
+  font: "BigBlueTerm437 Nerd Font Medium 13";
   modi: "window,run,drun";
   show-icons: true;
   icon-theme: "Papirus";
