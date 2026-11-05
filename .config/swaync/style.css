@@ -1,5 +1,5 @@
 * {
-  font-family: DepartureMono Nerd Font;
+  font-family: BigBlueTerm437 Nerd Font;
   font-weight: bold;
 }
 
@@ -8,7 +8,7 @@
 .control-center .notification-row:focus,
 .control-center .notification-row:hover {
   opacity: 0.9;
-  background: #282828;
+  background: #1e2021;
 }
 
 .notification-row {
@@ -24,7 +24,7 @@
 }
 
 .notification-content {
-  background: #282828;
+  background: #1e2021;
   padding: 10px;
   border-radius: 5px;
   border: 2px solid #83a598;
@@ -39,7 +39,7 @@
 
 .close-button {
   background: #fb4934;
-  color: #282828;
+  color: #1e2021;
   text-shadow: none;
   padding: 0;
   border-radius: 5px;
@@ -78,12 +78,12 @@
 
 .notification-action:first-child {
   border-bottom-left-radius: 10px;
-  background: #282828;
+  background: #1e2021;
 }
 
 .notification-action:last-child {
   border-bottom-right-radius: 10px;
-  background: #282828;
+  background: #1e2021;
 }
 
 /* Inline replies */
@@ -93,7 +93,7 @@
 }
 
 .inline-reply-entry {
-  background: #282828;
+  background: #1e2021;
   color: #d5c4a1;
   caret-color: #d5c4a1;
   border: 1px solid #fe8019;
@@ -102,7 +102,7 @@
 
 .inline-reply-button {
   margin-left: 4px;
-  background: #282828;
+  background: #1e2021;
   border: 1px solid #fe8019;
   border-radius: 5px;
   color: #d5c4a1;
@@ -115,7 +115,7 @@
 }
 
 .inline-reply-button:hover {
-  background: #282828;
+  background: #1e2021;
 }
 
 /* Images */
@@ -156,7 +156,7 @@
 /* Control center */
 
 .control-center {
-  background: #282828;
+  background: #1e2021;
   border: 2px solid #b6b92a;
   border-radius: 16px;
 }
@@ -181,7 +181,7 @@
 
 .widget-title {
   color: #b8bb26;
-  background: #282828;
+  background: #1e2021;
   padding: 5px 10px;
   margin: 10px 10px 5px 10px;
   font-size: 1.5rem;
@@ -192,7 +192,7 @@
   font-size: 1rem;
   color: #d5c4a1;
   text-shadow: none;
-  background: #282828;
+  background: #1e2021;
   box-shadow: none;
   border-radius: 5px;
 }
@@ -205,7 +205,7 @@
 /* Do Not Disturb */
 
 .widget-dnd {
-  background: #282828;
+  background: #1e2021;
   padding: 5px 10px;
   margin: 10px 10px 5px 10px;
   border-radius: 5px;
@@ -223,12 +223,12 @@
 }
 
 .widget-dnd > switch slider {
-  background: #282828;
+  background: #1e2021;
   border-radius: 5px;
 }
 
 .widget-dnd > switch:checked slider {
-  background: #282828;
+  background: #1e2021;
   border-radius: 5px;
 }
 
@@ -299,7 +299,7 @@
 }
 
 .per-app-volume {
-  background-color: #282828;
+  background-color: #1e2021;
   padding: 4px 8px 8px;
   margin: 0 8px 8px;
   border-radius: 5px;

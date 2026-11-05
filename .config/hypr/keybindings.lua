@@ -18,7 +18,7 @@ local mainMod = "SUPER"
 local terminal      = "kitty"
 local fileManager   = "dolphin"
 local lockscreen    = "hyprlock -q"
-local notification  = "swaync-client -t -s"
+local notification  = "killall swaync-client && swaync-client -t -s"
 local wallpaper     = "~/.config/hypr/scripts/wallpaper.sh"
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
@@ -90,19 +90,19 @@ hl.bind(mainMod .. " + F9",  hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOUR
 
 -- Screenshot
 -- whole screen
-hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("grim - | wl-copy"))
+hl.bind("Print", hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"'))
 
 -- active monitor
 hl.bind(mainMod .. " + ALT + P", hl.dsp.exec_cmd([[
-  bash -c 'grim -o "$(hyprctl activeworkspace -j | jq -r .monitor)" - | wl-copy'
+  bash -c 'grim -o "$(hyprctl activeworkspace -j | jq -r .monitor)" - | satty -f -'
 ]]))
 
 -- selection
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | wl-copy]]))
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | satty -f -]]))
 
 -- selection and freeze
 hl.bind(mainMod .. " + CONTROL + P", hl.dsp.exec_cmd([[
-  bash -c 'hyprpicker -r -z & PICKER_PID=$!; slurp | grim -g - - | wl-copy; kill $PICKER_PID 2>/dev/null'
+  bash -c 'hyprpicker -r -z & PICKER_PID=$!; slurp | grim -g - - | satty -f -; kill $PICKER_PID 2>/dev/null'
 ]]))
 
 -- color picker

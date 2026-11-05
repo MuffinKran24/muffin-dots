@@ -1,8 +1,8 @@
 configuration {
   display-drun: "Applications:";
-  display-window: "Windows:";
   drun-display-format: "{icon} {name}";
-  font: "BigBlueTerm437 Nerd Font Medium 12";
+  display-run: "Run:";
+  font: "BigBlueTerm437 Nerd Font Medium 13";
   modi: "window,run,drun";
   show-icons: true;
   icon-theme: "Papirus";
@@ -11,11 +11,11 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #282828;
-  bg-alt: #3c3836;
+  bg: #1d2021;
+  bg-alt: #282828;
 
   fg: #ebdbb2;
-  fg-alt: #7c6f64;
+  fg-alt: #a89984;
 
   background-color: @bg;
   

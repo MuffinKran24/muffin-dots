@@ -192,7 +192,7 @@ Scope {
               }
             }
 
-            Rectangle { width: 1; height: 12; color: root.colMuted }
+            Rectangle { width: 2; height: 14; color: root.colMuted }
 
             Text {
               property bool isMuted: root.source?.audio?.muted ?? false
@@ -231,13 +231,13 @@ Scope {
             anchors.centerIn: parent
             color: root.colOrange
             font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
-            text: Qt.formatDateTime(new Date(), " ddd, dd. MMM - HH:mm:ss ")
+            text: Qt.formatDateTime(new Date(), " ddd, dd. MMM - HH:mm ")
 
             Timer {
               interval: 1000
               running: true
               repeat: true
-              onTriggered: clockText.text = Qt.formatDateTime(new Date(), " ddd, dd. MMM - HH:mm:ss ")
+              onTriggered: clockText.text = Qt.formatDateTime(new Date(), " ddd, dd. MMM - HH:mm ")
             }
           }
         }
