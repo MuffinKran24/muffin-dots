@@ -21,7 +21,7 @@
             <const>lcdnone</const>
         </edit>
         <edit name="dpi" mode="assign">
-            <double>102</double>
+            <double>136</double>
         </edit>
     </match>
 </fontconfig>

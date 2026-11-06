@@ -22,7 +22,7 @@ Scope {
   property color colGreen: "#98971a"
   property color colOrange: "#fe8019"
 
-  property string fontFamily: "BigBlueTerm437 Nerd Font"
+  property string fontFamily: "CaskaydiaCove Nerd Font"
   property int fontSize: 15
   property int bubbleRadius: 10
 
@@ -83,7 +83,7 @@ Scope {
 
                 text: modelData
                 color: isActive ? root.colBlue : (ws ? root.colFg : root.colMuted)
-                font { family: root.fontFamily; pixelSize: root.fontSize; bold: isActive }
+                font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
 
                 MouseArea {
                   anchors.fill: parent

@@ -4,7 +4,7 @@ hl.window_rule({
 })
 
 hl.window_rule({
-  match = { class = "kitty|md.obsidian.Obsidian" },
+  match = { class = "md.obsidian.Obsidian" },
   opaque = false,
 })
 

@@ -18,7 +18,7 @@ local mainMod = "SUPER"
 local terminal      = "kitty"
 local fileManager   = "dolphin"
 local lockscreen    = "hyprlock -q"
-local notification  = "killall swaync-client && swaync-client -t -s"
+local notification  = "swaync-client -t"
 local wallpaper     = "~/.config/hypr/scripts/wallpaper.sh"
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())

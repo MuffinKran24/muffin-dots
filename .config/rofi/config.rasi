@@ -2,7 +2,7 @@ configuration {
   display-drun: "Applications:";
   drun-display-format: "{icon} {name}";
   display-run: "Run:";
-  font: "BigBlueTerm437 Nerd Font Medium 13";
+  font: "CaskaydiaCove Nerd Font Medium 13";
   modi: "window,run,drun";
   show-icons: true;
   icon-theme: "Papirus";
